@@ -1,0 +1,175 @@
+ClrHome
+
+dim([B]
+
+{Ans(1)+1,20}→dim([B]
+Ans(1)→B
+
+Disp "Match Scouting
+Input "Match Number:",A:A→[B](B,1
+
+Input "Team Number:",A:A→[B](B,2
+
+ClrHome
+
+Menu("Red Alliance or Blue Alliance?","Red",A,"Blue",B
+Lbl A:1→[B](B,3:Goto C
+Lbl B:2→[B](B,3
+Lbl C
+Menu("Are they present?","Yes",D,"No",E
+
+Lbl D
+1→[B](B,4:Goto F
+Lbl E
+2→[B](B,4:Goto F
+Lbl F
+
+Menu("Field Position?","Touching Subwfr,Cntrd",G,"Touching Subwfr,Fcng AMP",H,"Touching Subwfr, Fcng HP",I,"In front of single Drvr Stn",J,"In front of dbl Drvr Stn",K,"Other",L
+Lbl G
+1→[B](B,5:Goto M
+Lbl H
+2→[B](B,5:Goto M
+Lbl I
+3→[B](B,5:Goto M
+Lbl J
+4→[B](B,5:Goto M
+Lbl K
+5→[B](B,5:Goto M
+Lbl L
+6→[B](B,5
+Lbl M
+
+1→A
+0→C
+1→D
+1→E
+ClrHome
+While C≠105
+getKey→C
+If C=11:1→D
+If C=12:2→D
+If C=13:3→D
+If C=14:4→D
+If C=15:5→D
+
+If C=24 or C=25 or C=26 or C=34:1→E
+
+If D=1:Then
+Output(2,1,"*
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+If C=25:[B](B,6)+1→[B](B,6
+If C=34:[B](B,6)-1→[B](B,6
+If C=24:[B](B,7)-1→[B](B,7
+If C=26:[B](B,7)+1→[B](B,7
+End
+
+If D=2:Then
+Output(2,1," 
+Output(3,1,"*
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+If C=25:[B](B,8)+1→[B](B,8
+If C=34:[B](B,8)-1→[B](B,8
+If C=24:[B](B,9)-1→[B](B,9
+If C=26:[B](B,9)+1→[B](B,9
+End
+
+If D=3:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1,"*
+Output(5,1," 
+Output(6,1," 
+If C=25:[B](B,10)+1→[B](B,10
+If C=34:[B](B,10)-1→[B](B,10
+If C=24:[B](B,11)-1→[B](B,11
+If C=26:[B](B,11)+1→[B](B,11
+End
+
+If D=4:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1,"*
+Output(6,1," 
+If C=25:[B](B,12)+1→[B](B,12
+If C=34:[B](B,12)-1→[B](B,12
+If C=24:[B](B,13)-1→[B](B,13
+If C=26:[B](B,13)+1→[B](B,13
+End
+
+If D=5:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1,"*
+If C=25:[B](B,14)+1→[B](B,14
+If C=34:[B](B,14)-1→[B](B,14
+If C=24:[B](B,15)-1→[B](B,15
+If C=26:[B](B,15)+1→[B](B,15
+End
+
+If E≠0:Then
+Output(1,2,"Location:Made:Missed
+Output(2,2,"Amp: "+toString([B](B,6))+":"+toString([B](B,7))+"  
+Output(3,2,"Subwoofer: "+toString([B](B,8))+":"+toString([B](B,9))+"  
+Output(4,2,"Podium: "+toString([B](B,10))+":"+toString([B](B,11))+"  
+Output(5,2,"Medium: "+toString([B](B,12))+":"+toString([B](B,13))+"  
+Output(6,2,"Medium: "+toString([B](B,14))+":"+toString([B](B,15))+"  
+Output(7,1,"Location: top row
+Output(8,1,"Amnt made: up & down
+Output(9,1,"Amnt missed: left & right
+Output(10,1,"Done: enter
+0→E
+End
+
+End
+ClrHome
+
+Menu("Coopertition Button?","Pressed",N,"Not Pressed",O
+Lbl N
+1→[B](B,16:Goto P
+Lbl O
+2→[B](B,16
+Lbl P
+
+Menu("Was the robot disabled?","Yes",Q,"No",R
+Lbl Q
+1→[B](B,17:Goto S
+Lbl R
+2→[B](B,17
+Lbl S
+
+Menu("End game location","Parked at Podium",T,"Center Climb",U,"HP Climb",V,"AMP Climb",W,"Other",X
+Lbl T
+1→[B](B,18:Goto Y
+Lbl U
+2→[B](B,18:Goto Y
+Lbl V
+3→[B](B,18:Goto Y
+Lbl W
+4→[B](B,18:Goto Y
+Lbl X
+5→[B](B,18
+Lbl Y
+
+Menu("Trap?","Yes",Z,"No",ZA
+Lbl Z
+1→[B](B,19:Goto ZB
+Lbl ZA
+2→[B](B,19
+Lbl ZB
+
+Menu("High Note?","Scored",ZC,"Missed",ZD,"No Attempt",ZE
+Lbl ZC
+1→[B](B,20:Goto ZF
+Lbl ZD
+2→[B](B,20:Goto ZF
+Lbl ZE
+3→[B](B,20:Goto ZF
+Lbl ZF

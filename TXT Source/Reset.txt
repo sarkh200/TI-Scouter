@@ -1,0 +1,16 @@
+If A=1
+{1,1}→dim([B])
+If A=2
+{1,1}→dim([C])
+
+If A=3:Then
+dim([B]
+If Ans(1)=1:Goto ZZ
+{Ans(1)-1,Ans(2)}→dim([B]
+End
+If A=4:Then
+dim([C]
+If Ans(1)=1:Goto ZZ
+{Ans(1)-1,Ans(2)}→dim([C]
+End
+Lbl ZZ

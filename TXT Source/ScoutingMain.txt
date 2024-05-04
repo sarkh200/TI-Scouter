@@ -1,0 +1,21 @@
+"A is used for functions
+"B is used for match number
+"C is used for user input
+Lbl A
+Menu("What do you want to do?","Match Scout",B,"Pit Scout",C,"Reset Data",D,"Quit",ZZ
+Lbl B
+prgmMTCHSCT:Goto A
+Lbl C
+prgmPITSCOUT:Goto A
+Lbl D
+Menu("What do you want to do?","Reset Match Data",E,"Reset Pit Data",F,"Undo Match Entry",G,"Undo Pit Entry",H,"Back",A
+Lbl E
+1→A:prgmRSTDATA:Goto D
+Lbl F
+2→A:prgmRSTDATA:Goto D
+Lbl G
+3→A:prgmRSTDATA:Goto D
+Lbl H
+4→A:prgmRSTDATA:Goto D
+Lbl ZZ
+ClrHome

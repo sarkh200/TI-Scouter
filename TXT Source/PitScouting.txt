@@ -1,0 +1,119 @@
+ClrHome
+
+dim([C]
+
+{Ans(1)+1,38}→dim([C]
+Ans(1)→B
+
+
+Disp "Pit Scouting
+Input "Team Number:",A:A→[C](B,1
+
+Disp "Robot Characteristics
+Input "Robot Weight (lbs):",A:A→[C](B,2
+Input "Normal Robot Height (in):",A:A→[C](B,3
+Input "Max Robot Height (in):",A:A→[C](B,4
+Input "Robot Length (in):",A:A→[C](B,5
+Input "Robot Width (in):",A:A→[C](B,6
+
+ClrHome
+
+Menu("Drivetrain","Tank",A,"W. Coast",B,"Mecanum",C,"Swerve",D,"Other",E
+Lbl A
+1→[C](B,7:Goto F
+Lbl B
+2→[C](B,7:Goto F
+Lbl C
+3→[C](B,7:Goto F
+Lbl D
+4→[C](B,7:Goto F
+Lbl E
+5→[C](B,7
+Lbl F
+
+Menu("Drive Motors (Sel All)","NEO",G,"NEO 550",H,"Vortex",I,"Falcon",J,"Kraken",K,"Brushed",L,"Done",M
+Lbl G
+1→[C](B,8:Goto F
+Lbl H
+2→[C](B,9:Goto F
+Lbl I
+3→[C](B,10:Goto F
+Lbl J
+4→[C](B,11:Goto F
+Lbl K
+5→[C](B,12:Goto F
+Lbl L
+6→[C](B,13:Goto F
+Lbl M
+
+ClrHome
+Lbl N
+Menu("Intake","OTB",O,"UTB",P,"HPV",Q,"Done",R
+Lbl O
+1→[C](B,14:Goto N
+Lbl P
+2→[C](B,15:Goto N
+Lbl Q
+3→[C](B,16:Goto N
+Lbl R
+
+Menu("Under Stage?","Yes",S,"No",T
+Lbl S
+1→[C](B,17:Goto V
+Lbl T
+2→[C](B,17
+Lbl V
+
+Menu("Mechnsm Motors (Sel All)","NEO",W,"NEO 550",X,"Vortex",Y,"Falcon",Z,"Kraken",ZA,"Brushed",ZB,"Done",ZC
+Lbl W
+1→[C](B,18:Goto V
+Lbl X
+2→[C](B,19:Goto V
+Lbl Y
+3→[C](B,20:Goto V
+Lbl Z
+4→[C](B,21:Goto V
+Lbl ZA
+5→[C](B,22:Goto V
+Lbl ZB
+6→[C](B,23:Goto V
+Lbl ZC
+
+Menu("Vision (Sel All)","PhotonVision",ZD,"LimeLight",ZE,"North Star",ZF,"Other",ZG,"Done",ZH
+Lbl ZD
+1→[C](B,24:Goto ZC
+Lbl ZE
+1→[C](B,25:Goto ZC
+Lbl ZE
+1→[C](B,26:Goto ZC
+Lbl ZF
+1→[C](B,27:Goto ZC
+Lbl ZG
+1→[C](B,28:Goto ZC
+Lbl ZH
+
+Menu("Camera (Sel All)","LimeLight 2",ZI,"LimeLight 3",ZJ,"Arducam 9281",ZK,"Arducam 9282",ZL,"Pi CSI",ZM,"Other",ZN,"Done",ZO
+Lbl ZI
+1→[C](B,29:Goto ZH
+Lbl ZJ
+1→[C](B,30:Goto ZH
+Lbl ZK
+1→[C](B,31:Goto ZH
+Lbl ZL
+1→[C](B,32:Goto ZH
+Lbl ZM
+1→[C](B,33:Goto ZH
+Lbl ZN
+1→[C](B,34:Goto ZH
+Lbl ZO
+
+Menu("Auto Software (Sel All)","PathPlanner",ZP,"PathWeaver",ZQ,"Choreo",ZR,"Time Code Loop",ZS,"Done",ZT
+Lbl ZP
+1→[C](B,35:Goto ZO
+Lbl ZQ
+1→[C](B,36:Goto ZO
+Lbl ZR
+1→[C](B,37:Goto ZO
+Lbl ZS
+1→[C](B,38:Goto ZO
+Lbl ZT
