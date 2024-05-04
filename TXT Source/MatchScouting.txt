@@ -120,7 +120,7 @@ Output(2,2,"Amp: "+toString([B](B,6))+":"+toString([B](B,7))+"
 Output(3,2,"Subwoofer: "+toString([B](B,8))+":"+toString([B](B,9))+"  
 Output(4,2,"Podium: "+toString([B](B,10))+":"+toString([B](B,11))+"  
 Output(5,2,"Medium: "+toString([B](B,12))+":"+toString([B](B,13))+"  
-Output(6,2,"Medium: "+toString([B](B,14))+":"+toString([B](B,15))+"  
+Output(6,2,"Midfield: "+toString([B](B,14))+":"+toString([B](B,15))+"  
 Output(7,1,"Location: top row
 Output(8,1,"Amnt made: up & down
 Output(9,1,"Amnt missed: left & right
