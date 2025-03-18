@@ -18,102 +18,56 @@ Input "Robot Width (in):",A:A→[C](B,6
 
 ClrHome
 
-Menu("Drivetrain","Tank",A,"W. Coast",B,"Mecanum",C,"Swerve",D,"Other",E
+Menu("Prefered Starting Location:","Barge",A,"Middle",B,"Processor",C
 Lbl A
-1→[C](B,7:Goto F
+1→[C](B,7:Goto D
 Lbl B
-2→[C](B,7:Goto F
+2→[C](B,7:Goto D
 Lbl C
-3→[C](B,7:Goto F
+3→[C](B,7
 Lbl D
-4→[C](B,7:Goto F
+
+
+Menu("Scoring (Sel All)","Coral L1",E,"Coral L2",F,"Coral L3",G,"Coral L4",H,"Processor",I,"Barge",J,"Done",K
 Lbl E
-5→[C](B,7
+1→[C](B,8:Goto D
 Lbl F
-
-Menu("Drive Motors (Sel All)","NEO",G,"NEO 550",H,"Vortex",I,"Falcon",J,"Kraken",K,"Brushed",L,"Done",M
+2→[C](B,9:Goto D
 Lbl G
-1→[C](B,8:Goto F
+3→[C](B,10:Goto D
 Lbl H
-2→[C](B,9:Goto F
+4→[C](B,11:Goto D
 Lbl I
-3→[C](B,10:Goto F
+5→[C](B,12:Goto D
 Lbl J
-4→[C](B,11:Goto F
+6→[C](B,13:Goto D
 Lbl K
-5→[C](B,12:Goto F
-Lbl L
-6→[C](B,13:Goto F
-Lbl M
 
-ClrHome
+Menu("Prefered Scoring (Sel All)","Coral L1",L,"Coral L2",M,"Coral L3",N,"Coral L4",O,"Processor",P,"Barge",Q,"Done",R
+Lbl L
+1→[C](B,14:Goto K
+Lbl M
+2→[C](B,15:Goto K
 Lbl N
-Menu("Intake","OTB",O,"UTB",P,"HPV",Q,"Done",R
+3→[C](B,16:Goto K
 Lbl O
-1→[C](B,14:Goto N
+4→[C](B,17:Goto K
 Lbl P
-2→[C](B,15:Goto N
+5→[C](B,18:Goto K
 Lbl Q
-3→[C](B,16:Goto N
+6→[C](B,19:Goto K
 Lbl R
 
-Menu("Under Stage?","Yes",S,"No",T
+Menu("Climb (Sel All)","Deep",S,"Shallow",T,"None",U,"Done",U
 Lbl S
-1→[C](B,17:Goto V
+1→[C](B,20:Goto R
 Lbl T
-2→[C](B,17
+2→[C](B,21:Goto R
+Lbl U
+
+Menu("Prefered Climb (Sel All)","Deep",V,"Shallow",W,"None",X,"Done",X
 Lbl V
-
-Menu("Mechnsm Motors (Sel All)","NEO",W,"NEO 550",X,"Vortex",Y,"Falcon",Z,"Kraken",ZA,"Brushed",ZB,"Done",ZC
+1→[C](B,20:Goto U
 Lbl W
-1→[C](B,18:Goto V
+2→[C](B,21:Goto U
 Lbl X
-2→[C](B,19:Goto V
-Lbl Y
-3→[C](B,20:Goto V
-Lbl Z
-4→[C](B,21:Goto V
-Lbl ZA
-5→[C](B,22:Goto V
-Lbl ZB
-6→[C](B,23:Goto V
-Lbl ZC
-
-Menu("Vision (Sel All)","PhotonVision",ZD,"LimeLight",ZE,"North Star",ZF,"Other",ZG,"Done",ZH
-Lbl ZD
-1→[C](B,24:Goto ZC
-Lbl ZE
-1→[C](B,25:Goto ZC
-Lbl ZE
-1→[C](B,26:Goto ZC
-Lbl ZF
-1→[C](B,27:Goto ZC
-Lbl ZG
-1→[C](B,28:Goto ZC
-Lbl ZH
-
-Menu("Camera (Sel All)","LimeLight 2",ZI,"LimeLight 3",ZJ,"Arducam 9281",ZK,"Arducam 9282",ZL,"Pi CSI",ZM,"Other",ZN,"Done",ZO
-Lbl ZI
-1→[C](B,29:Goto ZH
-Lbl ZJ
-1→[C](B,30:Goto ZH
-Lbl ZK
-1→[C](B,31:Goto ZH
-Lbl ZL
-1→[C](B,32:Goto ZH
-Lbl ZM
-1→[C](B,33:Goto ZH
-Lbl ZN
-1→[C](B,34:Goto ZH
-Lbl ZO
-
-Menu("Auto Software (Sel All)","PathPlanner",ZP,"PathWeaver",ZQ,"Choreo",ZR,"Time Code Loop",ZS,"Done",ZT
-Lbl ZP
-1→[C](B,35:Goto ZO
-Lbl ZQ
-1→[C](B,36:Goto ZO
-Lbl ZR
-1→[C](B,37:Goto ZO
-Lbl ZS
-1→[C](B,38:Goto ZO
-Lbl ZT
