@@ -1,7 +1,7 @@
 If A=1
-{1,1}→dim([B])
+{1,1}→dim([B]
 If A=2
-{1,1}→dim([C])
+{1,1}→dim([C]
 
 If A=3:Then
 dim([B]

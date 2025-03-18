@@ -2,7 +2,7 @@ ClrHome
 
 dim([B]
 
-{Ans(1)+1,20}→dim([B]
+{Ans(1)+1,28}→dim([B]
 Ans(1)→B
 
 Disp "Match Scouting
@@ -16,21 +16,23 @@ Menu("Red Alliance or Blue Alliance?","Red",A,"Blue",B
 Lbl A:1→[B](B,3:Goto C
 Lbl B:2→[B](B,3
 Lbl C
-Menu("Are they present?","Yes",D,"No",E
 
+Menu("Are they present?","Yes",D,"No",E
 Lbl D
 1→[B](B,4:Goto F
 Lbl E
 2→[B](B,4:Goto F
 Lbl F
 
-Menu("Field Position?","Touching Subwfr,Cntrd",G,"Touching Subwfr,Fcng AMP",H,"Touching Subwfr, Fcng HP",I,"In front of single Drvr Stn",J,"In front of dbl Drvr Stn",K,"Other",L
+Menu("Team Position?","1",G,"2",H,"3",I
 Lbl G
 1→[B](B,5:Goto M
 Lbl H
 2→[B](B,5:Goto M
 Lbl I
 3→[B](B,5:Goto M
+
+Menu("Field Position?","Barge",J,"Middle",K,"Processor",L
 Lbl J
 4→[B](B,5:Goto M
 Lbl K
@@ -46,13 +48,10 @@ Lbl M
 ClrHome
 While C≠105
 getKey→C
-If C=11:1→D
-If C=12:2→D
-If C=13:3→D
-If C=14:4→D
-If C=15:5→D
+If C=25 and D>1:D-1→D
+If C=34 and D<8:D+1→D
 
-If C=24 or C=25 or C=26 or C=34:1→E
+If C=24 or C=26:1→E
 
 If D=1:Then
 Output(2,1,"*
@@ -60,10 +59,11 @@ Output(3,1,"
 Output(4,1," 
 Output(5,1," 
 Output(6,1," 
-If C=25:[B](B,6)+1→[B](B,6
-If C=34:[B](B,6)-1→[B](B,6
-If C=24:[B](B,7)-1→[B](B,7
-If C=26:[B](B,7)+1→[B](B,7
+Output(7,1," 
+Output(8,1," 
+Output(9,1," 
+If C=24 and [B](B,6)>0:[B](B,6)-1→[B](B,6
+If C=26 and [B](B,6)<1:[B](B,6)+1→[B](B,6
 End
 
 If D=2:Then
@@ -72,10 +72,11 @@ Output(3,1,"*
 Output(4,1," 
 Output(5,1," 
 Output(6,1," 
-If C=25:[B](B,8)+1→[B](B,8
-If C=34:[B](B,8)-1→[B](B,8
-If C=24:[B](B,9)-1→[B](B,9
-If C=26:[B](B,9)+1→[B](B,9
+Output(7,1," 
+Output(8,1," 
+Output(9,1," 
+If C=24:[B](B,7)-1→[B](B,7
+If C=26:[B](B,7)+1→[B](B,7
 End
 
 If D=3:Then
@@ -84,10 +85,11 @@ Output(3,1,"
 Output(4,1,"*
 Output(5,1," 
 Output(6,1," 
-If C=25:[B](B,10)+1→[B](B,10
-If C=34:[B](B,10)-1→[B](B,10
-If C=24:[B](B,11)-1→[B](B,11
-If C=26:[B](B,11)+1→[B](B,11
+Output(7,1," 
+Output(8,1," 
+Output(9,1," 
+If C=24:[B](B,8)-1→[B](B,8
+If C=26:[B](B,8)+1→[B](B,8
 End
 
 If D=4:Then
@@ -96,10 +98,11 @@ Output(3,1,"
 Output(4,1," 
 Output(5,1,"*
 Output(6,1," 
-If C=25:[B](B,12)+1→[B](B,12
-If C=34:[B](B,12)-1→[B](B,12
-If C=24:[B](B,13)-1→[B](B,13
-If C=26:[B](B,13)+1→[B](B,13
+Output(7,1," 
+Output(8,1," 
+Output(9,1," 
+If C=24:[B](B,9)-1→[B](B,9
+If C=26:[B](B,9)+1→[B](B,9
 End
 
 If D=5:Then
@@ -108,22 +111,63 @@ Output(3,1,"
 Output(4,1," 
 Output(5,1," 
 Output(6,1,"*
-If C=25:[B](B,14)+1→[B](B,14
-If C=34:[B](B,14)-1→[B](B,14
-If C=24:[B](B,15)-1→[B](B,15
-If C=26:[B](B,15)+1→[B](B,15
+Output(7,1," 
+Output(8,1," 
+Output(9,1," 
+If C=24:[B](B,10)-1→[B](B,10
+If C=26:[B](B,10)+1→[B](B,10
+End
+
+If D=6:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1,"*
+Output(8,1," 
+Output(9,1," 
+If C=24:[B](B,11)-1→[B](B,11
+If C=26:[B](B,11)+1→[B](B,11
+End
+
+If D=7:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1,"*
+Output(9,1," 
+If C=24:[B](B,12)-1→[B](B,12
+If C=26:[B](B,12)+1→[B](B,12
+End
+
+
+If D=8:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1," 
+Output(9,1,"*
+If C=24:[B](B,12)-1→[B](B,13
+If C=26:[B](B,12)+1→[B](B,13
 End
 
 If E≠0:Then
-Output(1,2,"Location:Made:Missed
-Output(2,2,"Amp: "+toString([B](B,6))+":"+toString([B](B,7))+"  
-Output(3,2,"Subwoofer: "+toString([B](B,8))+":"+toString([B](B,9))+"  
-Output(4,2,"Podium: "+toString([B](B,10))+":"+toString([B](B,11))+"  
-Output(5,2,"Medium: "+toString([B](B,12))+":"+toString([B](B,13))+"  
-Output(6,2,"Midfield: "+toString([B](B,14))+":"+toString([B](B,15))+"  
-Output(7,1,"Location: top row
-Output(8,1,"Amnt made: up & down
-Output(9,1,"Amnt missed: left & right
+Output(1,1,"Autonomous
+Output(2,2,"Robot left: "+toString([B](B,6))+"  
+Output(3,2,"L1 Coral: "+toString([B](B,7))+"  
+Output(4,2,"L2 Coral: "+toString([B](B,8))+"    
+Output(5,2,"L3 Coral: "+toString([B](B,9))+"    
+Output(6,2,"L4 Coral: "+toString([B](B,10))+"    
+Output(7,2,"Algae Rmvd: "+toString([B](B,11))+"    
+Output(8,2,"Processor: "+toString([B](B,12))+"    
+Output(9,2,"Barge: "+toString([B](B,13))+"    
 Output(10,1,"Done: enter
 0→E
 End
@@ -131,45 +175,181 @@ End
 End
 ClrHome
 
-Menu("Coopertition Button?","Pressed",N,"Not Pressed",O
+0→C
+1→D
+1→E
+While C≠105
+getKey→C
+If C=25 and D>1:D-1→D
+If C=34 and D<7:D+1→D
+
+If C=24 or C=26:1→E
+
+If D=1:Then
+Output(2,1,"*
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1," 
+If C=24:[B](B,14)-1→[B](B,14
+If C=26:[B](B,14)+1→[B](B,14
+End
+
+If D=2:Then
+Output(2,1," 
+Output(3,1,"*
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1," 
+If C=24:[B](B,15)-1→[B](B,15
+If C=26:[B](B,15)+1→[B](B,15
+End
+
+If D=3:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1,"*
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1," 
+If C=24:[B](B,16)-1→[B](B,16
+If C=26:[B](B,16)+1→[B](B,16
+End
+
+If D=4:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1,"*
+Output(6,1," 
+Output(7,1," 
+Output(8,1," 
+If C=24:[B](B,17)-1→[B](B,17
+If C=26:[B](B,17)+1→[B](B,17
+End
+
+If D=5:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1,"*
+Output(7,1," 
+Output(8,1," 
+If C=24:[B](B,18)-1→[B](B,18
+If C=26:[B](B,18)+1→[B](B,18
+End
+
+If D=6:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1,"*
+Output(8,1," 
+If C=24:[B](B,19)-1→[B](B,19
+If C=26:[B](B,19)+1→[B](B,19
+End
+
+If D=7:Then
+Output(2,1," 
+Output(3,1," 
+Output(4,1," 
+Output(5,1," 
+Output(6,1," 
+Output(7,1," 
+Output(8,1,"*
+If C=24:[B](B,20)-1→[B](B,20
+If C=26:[B](B,20)+1→[B](B,20
+End
+
+If E≠0:Then
+Output(1,1,"Teleop
+Output(2,2,"L1 Coral: "+toString([B](B,14))+"  
+Output(3,2,"L2 Coral: "+toString([B](B,15))+"    
+Output(4,2,"L3 Coral: "+toString([B](B,16))+"    
+Output(5,2,"L4 Coral: "+toString([B](B,17))+"    
+Output(6,2,"Algae Rmvd: "+toString([B](B,18))+"    
+Output(7,2,"Processor: "+toString([B](B,19))+"    
+Output(8,2,"Barge: "+toString([B](B,20))+"    
+Output(10,1,"Done: enter
+0→E
+End
+
+End
+ClrHome
+
+Menu("Coopertition?","Achived",N,"Not Achived",O
 Lbl N
-1→[B](B,16:Goto P
+1→[B](B,21:Goto P
 Lbl O
-2→[B](B,16
+2→[B](B,21
 Lbl P
 
 Menu("Was the robot disabled?","Yes",Q,"No",R
 Lbl Q
-1→[B](B,17:Goto S
+1→[B](B,22:Goto S
 Lbl R
-2→[B](B,17
+2→[B](B,22
 Lbl S
 
-Menu("End game location","Parked at Podium",T,"Center Climb",U,"HP Climb",V,"AMP Climb",W,"Other",X
+Menu("End game location","Parked",T,"Shallow Climb",U,"Deep Climb",V,"Kept Scoring",W,"Other",X
 Lbl T
-1→[B](B,18:Goto Y
+1→[B](B,23:Goto Y
 Lbl U
-2→[B](B,18:Goto Y
+2→[B](B,23:Goto Y
 Lbl V
-3→[B](B,18:Goto Y
+3→[B](B,23:Goto Y
 Lbl W
-4→[B](B,18:Goto Y
+4→[B](B,23:Goto Y
 Lbl X
-5→[B](B,18
+5→[B](B,23
 Lbl Y
 
-Menu("Trap?","Yes",Z,"No",ZA
+Menu("Penalty 1-5?","1 (None)",Z,"2",ZA,"3",ZB,"4",ZC,"5 (Many)",ZD
 Lbl Z
-1→[B](B,19:Goto ZB
+1→[B](B,24:Goto ZE
 Lbl ZA
-2→[B](B,19
+2→[B](B,24:Goto ZE
 Lbl ZB
-
-Menu("High Note?","Scored",ZC,"Missed",ZD,"No Attempt",ZE
+3→[B](B,24:Goto ZE
 Lbl ZC
-1→[B](B,20:Goto ZF
+4→[B](B,24:Goto ZE
 Lbl ZD
-2→[B](B,20:Goto ZF
+5→[B](B,24
 Lbl ZE
-3→[B](B,20:Goto ZF
+
+Menu("Broke down?","Yes",ZF,"No",ZG
 Lbl ZF
+1→[B](B,25:Goto ZH
+Lbl ZG
+2→[B](B,25
+Lbl ZH
+
+
+Menu("Top heavy?","Yes",ZI,"No",ZJ
+Lbl ZI
+1→[B](B,26:Goto ZK
+Lbl ZJ
+2→[B](B,26
+Lbl ZK
+
+Menu("Pinned easily?","Yes",ZL,"No",ZM
+Lbl ZL
+1→[B](B,27:Goto ZN
+Lbl ZM
+2→[B](B,27
+Lbl ZN
+
+Menu("Defence bot?","Yes",ZO,"No",ZP
+Lbl ZO
+1→[B](B,28:Goto ZQ
+Lbl ZP
+2→[B](B,28
+Lbl ZQ
