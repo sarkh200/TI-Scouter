@@ -1,7 +1,8 @@
 # TI Scouter
  FRC Scouting App made in TI Basic
  
- Layout based on ![Garage Scouter](https://github.com/frc4451/GarageScouter)
+ Match scouting layout based on 343's Hartsville google form
+ Pit scouting is still based on 2024 (TODO)
 
 # How to run
 
