@@ -1,5 +1,5 @@
 # TI Scouter
- FRC Scouting App made in TI Basic
+ 2024 FRC Scouting App made in TI Basic
 
 # How to run
 
