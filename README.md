@@ -1,5 +1,7 @@
 # TI Scouter
- 2024 FRC Scouting App made in TI Basic
+ FRC Scouting App made in TI Basic
+ 
+ Layout based on ![Garage Scouter](https://github.com/frc4451/GarageScouter)
 
 # How to run
 
